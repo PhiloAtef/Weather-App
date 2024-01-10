@@ -20,6 +20,7 @@ document.body.onload = () =>{
 function success(position) {
    latitude = position.coords.latitude;
    longitude = position.coords.longitude;
+   /* toberemoved */
     console.log(latitude, longitude)
 }
 
@@ -31,5 +32,20 @@ async function getWeather(long,lat){
 }
 
 let data = {
-    
-}
+    current: {
+        city: document.querySelector("#city-text"),
+        day: document.querySelector(""),
+        temp: document.querySelector(""),
+        weatherDetails:{
+            rain: document.querySelector(""),
+            windSpeed: document.querySelector(""),
+            windDirection: document.querySelector(""),
+        },
+    },
+    dates: document.querySelectorAll("[id^='weather-content-day-']"),
+    conditions: document.querySelectorAll("[id^='weather-content-condition-']"),
+    forecastPictures: document.querySelectorAll("picture img"),
+    maxDegrees: document.querySelectorAll("[id^='weather-content-max-degree-']"),
+    minDegrees: document.querySelectorAll("[id^='weather-content-min-degree-']"),
+};
+
