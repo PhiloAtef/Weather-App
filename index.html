@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- font awesome -->
+       <script src="https://kit.fontawesome.com/1519f54463.js" crossorigin="anonymous"></script>
+       <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+       
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav >
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-dark pb-5 pt-5" data-bs-theme = "dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Weather</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                  <a class="nav-link text-white active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Live Cameras</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Photos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">contact</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+    <main class="p-5">
+      <div class="container m-5">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control py-2 rounded-5 "
+            placeholder="Find your location..."
+          />
+          <button
+            class="btn btn-primary text-white rounded-5 px-4 "
+            type="button"
+            id="find-button"
+            onclick=""
+          >
+            Find
+          </button>
+        </div>
+      </div>
+      <div class="container ">
+        <div class="row row-cols-1 row-cols-md-3 g-0">
+          <div class="col">
+            <div class="card h-100 weather-content">
+              <div class="card-header d-flex custom-bg-light-tertiary">
+                <div id="weather-content-day-1">featured</div>
+                <div class="ms-auto" id="weather-content-date-1">featured2</div>
+              </div>
+              <div class="card-body weather-content-body custom-bg-light-tertiary p-5">
+                <p class="city" id="city-text">Card</p>
+                <div class="d-flex"><span class="celsius" id="current-degree-text">23°C</span> <div class="m-auto" id="current-weather-condition-icon"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt=""></div></div>
+                <p class="custom-text-primary" id="current-weather-text">Sunny</p>
+                <div class="row">
+                  <div class="weather-details-item col-4 d-flex justify-content-start align-items-center">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-umbrella custom-text-gray"></i>
+                      <p class="ms-2 mb-0 text-white-50" id="current-weather-details-rain">test</p>
+                    </div>
+                  </div>
+                  <div class="weather-details-item col-4 d-flex justify-content-start align-items-center">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-wind custom-text-gray"></i>
+                      <p id="current-weather-details-wind-speed" class="ms-2 mb-0 text-white-50">
+                        test
+                      </p>
+                    </div>
+                  </div>
+                  <div class="weather-details-item col-4 d-flex justify-content-start align-items-center">
+                    <div class="icon-container">
+                      <i class="fa-regular fa-compass custom-text-gray"></i>
+                      <p id="current-weather-details-wind-direction" class="ms-2 mb-0 text-white-50">
+                        test
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 weather-content">
+              <div class="custom-bg-tertiary card-header text-center " id="weather-content-day-2">
+                Featured
+              </div>
+              <div class="card-body custom-bg-tertiary text-center">
+                <div id="weather-condition-icon-day-2" class="text-center mt-4">
+                  <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+                </div>
+                <p id="weather-content-max-degree-2" class="fs-3 text-white mt-3 mb-0 fw-bolder">23°C</p>
+                <p id="weather-content-min-degree-2" class="fs-6 text-white-50 mt-0 p-0">23°C</p>
+                <p class="custom-text-primary" id="-weather-text-day-2">Sunny</p>
+              </div>
+             
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 weather-content">
+              <div class="card-header text-center custom-bg-light-tertiary">
+                Featured
+              </div>
+              <div class="card-body custom-bg-light-tertiary text-center">
+                <div id="weather-condition-icon-day-3" class="text-center mt-4">
+                  <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+                </div>
+                <p id="weather-content-max-degree-3" class="fs-3 text-white mt-3 mb-0 fw-bolder">23°C</p>
+                <p id="weather-content-min-degree-3" class="fs-6 text-white-50 mt-0 p-0">23°C</p>
+                <p class="custom-text-primary" id="weather-text-day-3">Sunny</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="custom-bg-light-tertiary py-5">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control py-2 custom-bg-secondary text-white"
+                placeholder="Enter your email to subscribe..."
+              />
+              <button
+                class="btn btn-primary custom-bg-primary text-white px-4"
+                type="button"
+                id="subscribe-button"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex">
+            <a
+              href="https://www.facebook.com"
+              class="text-decoration-none mx-1"
+            >
+              <div
+                class="icon-lg-container p-1 rounded-circle custom-bg-secondary"
+              >
+                <i
+                  class="fa-brands fa-facebook-f fa-lg custom-text-primary"
+                ></i>
+              </div>
+            </a>
+            <a href="https://www.twitter.com" class="text-decoration-none mx-1">
+              <div
+                class="icon-lg-container p-1 rounded-circle custom-bg-secondary"
+              >
+                <i class="fa-brands fa-twitter fa-lg custom-text-primary"></i>
+              </div>
+            </a>
+            <a href="https://www.google.com" class="text-decoration-none mx-1">
+              <div
+                class="icon-lg-container p-1 rounded-circle custom-bg-secondary"
+              >
+                <i
+                  class="fa-brands fa-google-plus-g fa-lg custom-text-primary"
+                ></i>
+              </div>
+            </a>
+            <a
+              href="https://www.pinterest.com"
+              class="text-decoration-none mx-1"
+            >
+              <div
+                class="icon-lg-container p-1 rounded-circle custom-bg-secondary"
+              >
+                <i class="fa-brands fa-pinterest fa-lg custom-text-primary"></i>
+              </div>
+            </a>
+          </div>
+          <div class="col-auto">
+            <p class="text-white-50">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
