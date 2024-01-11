@@ -126,3 +126,10 @@ document.querySelector("#input-field").addEventListener('keyup',(e) =>{
     let query = e.target.value;
     getQuery(query);
 } )
+
+/*  why does this not work ??
+
+document.querySelector("#find-button").addEventListener('click',() => {
+    let input = document.querySelector("#input-field").value;
+    getQuery(input);
+}) */
