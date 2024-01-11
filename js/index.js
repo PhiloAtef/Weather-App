@@ -41,6 +41,12 @@ function success(position) {
     console.log(latitude, longitude)
 }
 
+async function getQuery(q){
+    var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${q}`)
+    var finalresponse = await response.json();
+    console.log(finalresponse)
+    refreshDisplay(finalresponse);
+}
 
 async function getWeather(long,lat){
     var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${lat},${long}`)
@@ -58,7 +64,6 @@ function refreshDisplay(response){
     data.current.weatherDetails.windSpeed.innerHTML =
     Math.round(Number(response.current.wind_kph)) + "km/h";
     /**need to parse wind direction */
-    console.log(response.current.wind_dir)
     data.current.weatherDetails.windDirection.innerHTML =
     WindDir(response.current.wind_dir);
 
@@ -112,3 +117,8 @@ function WindDir(wind){
       console.log(result)
       return result;
 }
+
+let test = document.querySelector("#input-field").addEventListener('keyup',(e) =>{
+    let query = e.target.value;
+    getQuery(query);
+} )
