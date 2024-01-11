@@ -51,7 +51,7 @@ function success(position) {
 
 async function getQuery(q) {
   var response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${q}`
+    `https://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${q}`
   );
   var finalresponse = await response.json();
   /* remove comment in case of testing
@@ -61,7 +61,7 @@ async function getQuery(q) {
 
 async function getWeather(long, lat) {
   var response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${lat},${long}`
+    `https://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${lat},${long}`
   );
   var finalresponse = await response.json();
   /* remove comment in case of testing
