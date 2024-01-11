@@ -122,7 +122,7 @@ function WindDir(wind){
       return result;
 }
 
-let test = document.querySelector("#input-field").addEventListener('keyup',(e) =>{
+document.querySelector("#input-field").addEventListener('keyup',(e) =>{
     let query = e.target.value;
     getQuery(query);
 } )
