@@ -31,27 +31,30 @@ document.body.onload = () =>{
         navigator.geolocation.getCurrentPosition(success);
         setTimeout(() => {
             getWeather(longitude, latitude);
-        }, 1000);
+        }, 100);
       }
 }
 function success(position) {
    latitude = position.coords.latitude;
    longitude = position.coords.longitude;
-   /* toberemoved */
-    console.log(latitude, longitude)
+ 
+    /* remove comment in case of testing
+    console.log(latitude, longitude) */
 }
 
 async function getQuery(q){
     var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${q}`)
     var finalresponse = await response.json();
-    console.log(finalresponse)
+    /* remove comment in case of testing
+    console.log(finalresponse) */
     refreshDisplay(finalresponse);
 }
 
 async function getWeather(long,lat){
     var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&days=${numberOfDays}&q=${lat},${long}`)
     var finalresponse = await response.json();
-    console.log(finalresponse)
+    /* remove comment in case of testing
+    console.log(finalresponse) */
     refreshDisplay(finalresponse);
 }
 
@@ -114,7 +117,8 @@ function WindDir(wind){
             break;
         }
       }
-      console.log(result)
+      /* remove comment in case of testing
+      console.log(result) */
       return result;
 }
 
